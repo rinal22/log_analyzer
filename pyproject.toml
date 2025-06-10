@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "log-analyzer"
+version = "0.1.0"
+description = ""
+authors = ["rnushtaeva <rnushtaeva@ozon.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+black = "^25.1.0"
+ruff = "^0.11.13"
+mypy = "^1.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+ignore = ["E501"]
+
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+disallow_untyped_defs = true
